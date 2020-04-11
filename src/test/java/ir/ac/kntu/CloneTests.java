@@ -65,7 +65,7 @@ public class CloneTests {
     public void testTeacherDeepClone() throws CloneNotSupportedException {
         var teacherClone = teacher.clone();
         Assertions.assertEquals(teacher, teacherClone, "clones are not equal");
-        Assertions.assertNotSame(teacherClone, teacherClone, "do not return " +
+        Assertions.assertNotSame(teacher, teacherClone, "do not return " +
                 "the exact same object - use the clone method");
 
         Assertions.assertEquals(teacher.getName(), teacherClone.getName(),
